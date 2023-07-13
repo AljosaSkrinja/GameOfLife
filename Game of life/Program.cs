@@ -1,13 +1,13 @@
 ﻿//Design
 const int rows = 20;
 const int cols = 40;       
-const int speed = 500; //1000 = 1sekunda
+const int speed = 500; //1000 = 1sec
 const char live = '#';
 const char dead = ' ';
 bool[,] grid = new bool[rows, cols];
 
 IntroBanner();
-Meni1(ref grid);
+Menu1(ref grid);
 
 while (true)
 {
@@ -67,7 +67,7 @@ static void IntroBanner()
     Console.ReadKey();
 
 }
-static void Meni1(ref bool[,] grid)
+static void Menu1(ref bool[,] grid)
 {
     Console.Clear();
     Console.WriteLine("# # # # # # # # # # # # # # # # # # # # # # # ");
@@ -78,7 +78,7 @@ static void Meni1(ref bool[,] grid)
     switch (int.Parse(Console.ReadLine()))
     {
         case 0:
-            Meni2(ref grid);
+            Menu2(ref grid);
             break;
         case 1:
             Random(ref grid);
@@ -89,7 +89,7 @@ static void Meni1(ref bool[,] grid)
  
 
 }
-static void Meni2(ref bool[,] grid) 
+static void Menu2(ref bool[,] grid) 
 {
     Console.Clear();
     Console.WriteLine("# # # # # # # # # # # # # # # # # # # # # # # ");
